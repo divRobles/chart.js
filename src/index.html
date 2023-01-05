@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización de datos con ChartJS</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <main>
+
+        <h1>Montañas rusas dataviz</h1>
+        <p>Visualización de estadísticas globales</p>
+
+        <hr>
+
+        <section class="cols-2">
+
+            <figure>
+                <h2>Comparativa de modelos</h2>
+                <canvas id="modelsChart"></canvas>
+            </figure>
+
+            <figure>
+                <h2>Comparativa de características:
+                    <select id="featuresOptions">
+                        <option value="height">Altura (m)</option>
+                        <option value="length">Longitud (m)</option>
+                        <option value="speed">Velocidad (km/h)</option>
+                    </select>
+                </h2>
+                <canvas id="featuresChart"></canvas>
+            </figure>
+
+        </section>
+
+        <section class="cols-1">
+            <figure>
+                <h2>Construcciones por año</h2>
+                <canvas id="yearsChart" height="300px"></canvas>
+            </figure>
+        </section>
+
+        <section class="cols-1">
+            <figure>
+                <h2>Simple Chart</h2>
+                <div>
+                    <canvas id="acquisitions"></canvas>
+                </div>
+            </figure>
+        </section>
+
+        <section class="cols-2">
+            <figure>
+                <h2>Bubble</h2>
+                <div style="width: 500px;"><canvas id="dimensions"></canvas></div><br/>
+
+                
+            </figure>
+            <figure>
+                <h2>Polar Area</h2>
+                <div style="width: 500px;"><canvas id="bubble"></canvas></div><br/>
+
+                
+            </figure>
+            
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    <script src="./models.js"></script>
+    <script src="./helpers.js"></script>
+    <script src="./handlers.js"></script>
+    <script type="module" src="./api.js"></script>
+    <script type="module" src="./acquisitions.js"></script>
+    <script type="module" src="bubble.js"></script>
+    <script type="module" src="dimensions.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
